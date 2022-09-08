@@ -8,10 +8,10 @@
 
 ## Board Configuration Files
 
-  * config.g – Primary configuration file, where the core configs are stored.
+  * config.g - Primary configuration file, where the core configs are stored.
 
   * bed.g - autoleveling for Delta printers.
-  * deployprobe.g - for deploying a probe for Delta printers – Removing this.
+  * deployprobe.g - for deploying a probe for Delta printers ï¿½ Removing this.
   * homedelta.g - homing on a Delta printers.
   * pause.g - for pausing the printer.
   * rResume.g - Resume file.
@@ -19,6 +19,6 @@
 
 ## Firmware Files
 
-  * DuetWebControl.bin – Web Interface firmware file.
-  * DuetWiFiServer.bin – WiFi Server firmware file.
-  * iap4e.bin – Electronics firmware file.
+  * DuetWebControl.bin ï¿½ Web Interface firmware file.
+  * DuetWiFiServer.bin ï¿½ WiFi Server firmware file.
+  * iap4e.bin ï¿½ Electronics firmware file.
