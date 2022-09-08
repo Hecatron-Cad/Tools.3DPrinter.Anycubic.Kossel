@@ -90,7 +90,7 @@ M558 P5 C"e0stop" R0.4 H10 F150 T1000 A10             ; Use E0 end stop for prob
 
 ; Probe - Tweaked for silicon sock on extruder
 ; Reduce Z to increase the spacing, increase Z to reduce the spacing 
-G31 P1000 H0 X0 Y0 Z17.05
+G31 P1000 H0 X0 Y0 Z17.19
 
 ; Define mesh grid
 M557 R110 S20
@@ -135,8 +135,7 @@ G10 P0 R0 S0                                         ; Set initial tool 0 active
 M911 S10 R11 P"M913 X0 Y0 G91 M83 G1 Z3 E-5 F1000"   ; Set voltage thresholds and actions to run on power loss
 ; Alter scale on axis
 ; asked for distance / actual distance = correction factor
-;M579 X1.006 Y1.0 Z1.0
-M579 X1.0 Y1.0 Z1.0
+M579 X1.006 Y1.0 Z1.0
 ; Select first tool
 T0
 
@@ -144,7 +143,7 @@ T0
 M501
 
 ; Self Set Baby Stepping for Z offset
-M290 R0 S0.14
+M290 R0 S0.46
 
 ; Note with my current bed a ultrabase within config-override after a auto calibration / M500 save
 ; the delta height should be around
