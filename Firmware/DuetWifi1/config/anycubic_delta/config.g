@@ -46,10 +46,13 @@ M92 X80.3 Y80.3 Z80.3                                ; Set steps per mm for axis
 M906 X1000 Y1000 Z1000 E1000 I30                     ; Set motor currents (mA) and increase idle current to 30%
 M84 S30                                              ; Set idle timeout
 
-; Set steps per mm for extruder todo move to macro
+; Set steps per mm for extruder
+M92 E95.0
+
+; Todo do we still need these if flow is set correct?
 ; M92 E98.6 ; PLA
 ; M92 E104 ; Blue PETG
-M92 E105 ; Red PETG
+;M92 E105 ; Red PETG
 
 ; ******** Drive Speeds ********
 
@@ -133,10 +136,10 @@ G10 P0 R0 S0                                         ; Set initial tool 0 active
 ; M575 P1 S1 B57600                                  ; enable support for PanelDue
 ; Automatic power saving
 M911 S10 R11 P"M913 X0 Y0 G91 M83 G1 Z3 E-5 F1000"   ; Set voltage thresholds and actions to run on power loss
+
 ; Alter scale on axis
 ; asked for distance / actual distance = correction factor
-;M579 X1.006 Y1.0 Z1.0
-M579 X1.0 Y1.0 Z1.0
+M579 X1.018 Y1.012 Z1.0
 ; Select first tool
 T0
 
@@ -144,15 +147,9 @@ T0
 M501
 
 ; Self Set Baby Stepping for Z offset
-M290 R0 S0.14
-
-; Note with my current bed a ultrabase within config-override after a auto calibration / M500 save
-; the delta height should be around
-; M665 H290.110
+M290 R0 S-0.24
 
 ; Load G29 bed leveling file
-; TODO
-;G29 S1
-
+G29 S1
 ; Disable Mesh compensation
 ; G29 S2
