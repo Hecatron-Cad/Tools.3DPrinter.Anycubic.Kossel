@@ -10,11 +10,12 @@ The first step is to calibrate the number of steps on the extruder motor based o
 This should remain consistent between different filaments so should only need to be done once for the printer in the config.
 
   * First feed some new filament into the extruder motor at the top.
-  * Next Increase the temperature of the head to around 190 or so, the duet will prevent the extruder motor from moving without it set.
+  * Run `M302 P1` to enable cold extrusion.
   * Mark the filament at the entry.
   * Make another mark 200mm further up.
   * Extrude 200mm via the the Panel Duet.
   * Check to see if it's gone past or not far enough in relation to the first point.
+  * Turn off cold extrusion with `M302 P0`
 
 The setting to alter for the duet board is `M92 E95.0` in terms of steps per mm
 
