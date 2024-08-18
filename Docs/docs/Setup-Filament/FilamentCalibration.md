@@ -36,13 +36,22 @@ Import a 30mm test cube into Cura with the following settings.
   * Layer Height: 0.2mm
   * Infill Density: 0%
   * Top Layers: 0
-  * Wall thickness 0.7mm (double the size of the nozzel)
+    For Prusa: Horizontal Shell / Solid Layers (Top): 0 
+  * Wall thickness 1.2mm (double the size of the nozzel)
+    For Prusa: Vertical Shell / Permimiters: 2
   * Support: Off
 
 This should generate a hollow cube with 2 layers on the walls.  
 Take 2 measurements on each wall of the cube.
 Add them all up then divide by 8
 We're aiming for 2 x the nozzel thickness (2 x 0.35 = 0.7mm)
+
+Note with prusa the default extrusion width is 112.5% of the nozzle
+0.4 - 0.45
+0.6 - 0.675
+0.675 x 2 = 1.35mm for wall thickness
+
+TODO - Reset extrusion width to defaults on all profiles
 
 
 ### Eryone3d PLA+

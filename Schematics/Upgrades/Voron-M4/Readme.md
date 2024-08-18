@@ -16,8 +16,8 @@ STL files for the Voron M4 Mobius Extruder
 ### Black
 
   * main_body
-  * motor_plate
   * end_plate
+  * motor_plate
   * latch_shuttle
 
 ### Blue
